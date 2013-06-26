@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/suzumura-ss/ExifWeather.png)](https://travis-ci.org/suzumura-ss/ExifWeather)
+
 # ExifWeather
 
 Get weather information via http://openweathermap.org/ based on GPS information of JPEG.
