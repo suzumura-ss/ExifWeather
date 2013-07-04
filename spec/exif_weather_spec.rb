@@ -48,6 +48,7 @@ describe ExifWeather do
       
     end
     it "shoud be nil when JPEG have no GPS info." do
+      pending("No API key.") unless @opt[:apikey]
       r = ExifWeather.weather(@no_gps, @opt)
       expect(r).to be_an_instance_of(Hash)
       expect(r[:icon_url]).to be_nil
@@ -55,6 +56,7 @@ describe ExifWeather do
       expect(r[:desc]).to be_nil
     end
     it "shoud be nil when JPEG have no latitude info." do
+      pending("No API key.") unless @opt[:apikey]
       r = ExifWeather.weather(@no_lat, @opt)
       expect(r).to be_an_instance_of(Hash)
       expect(r[:icon_url]).to be_nil
@@ -62,6 +64,7 @@ describe ExifWeather do
       expect(r[:desc]).to be_nil
     end
     it "shoud be nil when JPEG have no longitude info." do
+      pending("No API key.") unless @opt[:apikey]
       r = ExifWeather.weather(@no_lon, @opt)
       expect(r).to be_an_instance_of(Hash)
       expect(r[:icon_url]).to be_nil
@@ -69,6 +72,7 @@ describe ExifWeather do
       expect(r[:desc]).to be_nil
     end
     it "shoud be return hash when JPEG have GPS info." do
+      pending("No API key.") unless @opt[:apikey]
       r = ExifWeather.weather(@gps, @opt)
       expect(r).to be_an_instance_of(Hash)
       expect(r[:icon_url]).to be_an_instance_of(String)
